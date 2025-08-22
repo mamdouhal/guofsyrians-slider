@@ -32,12 +32,30 @@ export const useCatalog = () => {
     return parent?.children.some(child => child.id === childId) || false;
   };
 
+  const getUniversitiesForCity = (parentId: string): Link[] => {
+    const parent = getParentById(parentId);
+    if (!parent?.children[0]) return [];
+    return parent.children[0].links || [];
+  };
+
+  const getUniversityById = (universityId: string): Link | undefined => {
+    for (const parent of catalog) {
+      for (const child of parent.children) {
+        const university = child.links.find(link => link.id === universityId);
+        if (university) return university;
+      }
+    }
+    return undefined;
+  };
+
   return {
     getParentCategories,
     getParentById,
     getChildCategories,
     getChildById,
     getLinks,
+    getUniversitiesForCity,
+    getUniversityById,
     isValidParent,
     isValidChild,
   };
