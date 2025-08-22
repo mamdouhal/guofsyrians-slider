@@ -34,11 +34,11 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Left Section - Logo (RTL: appears on left) */}
           <div className="flex-shrink-0 order-1">
-            <div className="h-8 w-8 sm:h-10 sm:w-10 bg-white rounded-lg flex items-center justify-center shadow-sm p-1">
+            <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center">
               <img 
                 src={logoImage}
                 alt="شعار اتحاد الطلاب السوريين"
-                className="h-full w-full object-contain hover:scale-105 transition-transform duration-200 cursor-pointer"
+                className="h-full w-full object-contain"
                 loading="lazy"
                 onClick={() => window.location.reload()}
               />
