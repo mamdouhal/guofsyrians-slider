@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '../assets/لوغو الاتحاد ابيض.png';
 
 interface HeaderProps {
   title?: string;
@@ -33,17 +34,14 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Left Section - Logo (RTL: appears on left) */}
           <div className="flex-shrink-0 order-1">
-            <div className="h-8 w-8 sm:h-10 sm:w-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-              {/* Logo placeholder - you can replace with actual logo */}
-              <svg 
-                className="h-4 w-4 sm:h-6 sm:w-6 text-[#214937]" 
-                fill="currentColor" 
-                viewBox="0 0 24 24"
-                aria-label="شعار المنصة"
-                role="img"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
+            <div className="h-8 w-8 sm:h-10 sm:w-10 bg-white rounded-lg flex items-center justify-center shadow-sm p-1">
+              <img 
+                src={logoImage}
+                alt="شعار اتحاد الطلاب السوريين"
+                className="h-full w-full object-contain hover:scale-105 transition-transform duration-200 cursor-pointer"
+                loading="lazy"
+                onClick={() => window.location.reload()}
+              />
             </div>
           </div>
         </div>
