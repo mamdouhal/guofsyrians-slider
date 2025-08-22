@@ -20,349 +20,239 @@ export interface ParentCategory {
 
 export const catalog: ParentCategory[] = [
   {
-    id: 'content',
-    name: 'Content & Media',
+    id: 'sparta',
+    name: 'اسبارطة',
     children: [
       {
-        id: 'articles',
-        name: 'Articles & Blogs',
+        id: 'sparta-universities',
+        name: 'الجامعات',
         links: [
           {
-            id: 'medium',
-            title: 'Medium',
-            description: 'Professional publishing platform for writers and readers worldwide',
-            url: 'https://medium.com',
-            icon: '📝'
-          },
-          {
-            id: 'dev-to',
-            title: 'DEV Community',
-            description: 'Community of software developers sharing knowledge and experiences',
-            url: 'https://dev.to',
-            icon: '💻'
-          },
-          {
-            id: 'hashnode',
-            title: 'Hashnode',
-            description: 'Blogging platform for developers and tech writers with great SEO',
-            url: 'https://hashnode.com',
-            icon: '📖'
-          },
-          {
-            id: 'substack',
-            title: 'Substack',
-            description: 'Newsletter platform for independent writers and creators',
-            url: 'https://substack.com',
-            icon: '📰'
-          }
-        ]
-      },
-      {
-        id: 'videos',
-        name: 'Video Content',
-        links: [
-          {
-            id: 'youtube',
-            title: 'YouTube',
-            description: 'World\'s largest video sharing platform with billions of hours of content',
-            url: 'https://youtube.com',
-            icon: '📺'
-          },
-          {
-            id: 'vimeo',
-            title: 'Vimeo',
-            description: 'Professional video hosting and streaming for creators and businesses',
-            url: 'https://vimeo.com',
-            icon: '🎬'
-          },
-          {
-            id: 'twitch',
-            title: 'Twitch',
-            description: 'Live streaming platform for gaming and creative content creators',
-            url: 'https://twitch.tv',
-            icon: '🎮'
-          },
-          {
-            id: 'tiktok',
-            title: 'TikTok',
-            description: 'Short-form video platform for entertainment and viral content',
-            url: 'https://tiktok.com',
-            icon: '🎵'
-          }
-        ]
-      },
-      {
-        id: 'podcasts',
-        name: 'Podcasts',
-        links: [
-          {
-            id: 'spotify',
-            title: 'Spotify Podcasts',
-            description: 'Discover and listen to millions of podcasts on various topics',
-            url: 'https://spotify.com/podcasts',
-            icon: '🎧'
-          },
-          {
-            id: 'apple-podcasts',
-            title: 'Apple Podcasts',
-            description: 'Apple\'s podcast platform with exclusive shows and series',
-            url: 'https://podcasts.apple.com',
-            icon: '🍎'
+            id: 'sparta-university',
+            title: 'جامعة اسبارطة',
+            description: 'مجموعة طلاب جامعة اسبارطة للتواصل والمساعدة الأكاديمية',
+            url: 'https://chat.whatsapp.com/BTlTQe9pRX46SJ0jVqX4pm?mode=ac_t',
+            icon: '🏛️'
           }
         ]
       }
     ]
   },
   {
-    id: 'development',
-    name: 'Development Tools',
+    id: 'istanbul',
+    name: 'إسطنبول',
     children: [
       {
-        id: 'editors',
-        name: 'Code Editors',
+        id: 'istanbul-universities',
+        name: 'الجامعات',
         links: [
           {
-            id: 'vscode',
-            title: 'Visual Studio Code',
-            description: 'Free source-code editor with debugging and Git integration',
-            url: 'https://code.visualstudio.com',
-            icon: '💾'
-          },
-          {
-            id: 'webstorm',
-            title: 'WebStorm',
-            description: 'Professional IDE for JavaScript and web development',
-            url: 'https://jetbrains.com/webstorm',
-            icon: '🛠️'
-          },
-          {
-            id: 'sublime',
-            title: 'Sublime Text',
-            description: 'Sophisticated text editor for code, markup and prose',
-            url: 'https://sublimetext.com',
-            icon: '✨'
-          },
-          {
-            id: 'atom',
-            title: 'Atom',
-            description: 'Hackable text editor for the 21st Century',
-            url: 'https://atom.io',
-            icon: '⚛️'
-          }
-        ]
-      },
-      {
-        id: 'frameworks',
-        name: 'Frameworks',
-        links: [
-          {
-            id: 'react',
-            title: 'React',
-            description: 'JavaScript library for building user interfaces',
-            url: 'https://react.dev',
-            icon: '⚛️'
-          },
-          {
-            id: 'vue',
-            title: 'Vue.js',
-            description: 'Progressive JavaScript framework for building UIs',
-            url: 'https://vuejs.org',
-            icon: '�'
-          },
-          {
-            id: 'angular',
-            title: 'Angular',
-            description: 'Platform for building mobile and desktop web applications',
-            url: 'https://angular.io',
-            icon: '🅰️'
-          },
-          {
-            id: 'svelte',
-            title: 'Svelte',
-            description: 'Cybernetically enhanced web apps with great performance',
-            url: 'https://svelte.dev',
-            icon: '🧡'
-          }
-        ]
-      },
-      {
-        id: 'deployment',
-        name: 'Deployment & Hosting',
-        links: [
-          {
-            id: 'vercel',
-            title: 'Vercel',
-            description: 'Platform for frontend developers to deploy and scale applications',
-            url: 'https://vercel.com',
-            icon: '🚀'
-          },
-          {
-            id: 'netlify',
-            title: 'Netlify',
-            description: 'Web development platform for building and deploying modern sites',
-            url: 'https://netlify.com',
-            icon: '🌐'
-          },
-          {
-            id: 'github-pages',
-            title: 'GitHub Pages',
-            description: 'Static site hosting directly from your GitHub repository',
-            url: 'https://pages.github.com',
-            icon: '📄'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'learning',
-    name: 'Learning Resources',
-    children: [
-      {
-        id: 'courses',
-        name: 'Online Courses',
-        links: [
-          {
-            id: 'coursera',
-            title: 'Coursera',
-            description: 'Online courses from universities and companies worldwide',
-            url: 'https://coursera.org',
+            id: 'gelisim-university',
+            title: 'جامعة غليشيم',
+            description: 'مجموعة طلاب جامعة غليشيم في إسطنبول',
+            url: 'https://chat.whatsapp.com/EM0FLSZshPZBU6D8hQiaJP?mode=ac_t',
             icon: '🎓'
           },
           {
-            id: 'udemy',
-            title: 'Udemy',
-            description: 'Online learning marketplace with courses on various topics',
-            url: 'https://udemy.com',
-            icon: '📚'
+            id: 'yildiz-university',
+            title: 'جامعة يلدز',
+            description: 'مجموعة طلاب جامعة يلدز التقنية في إسطنبول',
+            url: 'https://t.me/+dp-Huio0inc2MmJk',
+            icon: '⭐'
           },
           {
-            id: 'pluralsight',
-            title: 'Pluralsight',
-            description: 'Technology skills platform for developers and IT professionals',
-            url: 'https://pluralsight.com',
-            icon: '💡'
+            id: 'biruni-university',
+            title: 'جامعة بيروني',
+            description: 'مجموعة طلاب جامعة بيروني في إسطنبول',
+            url: 'https://chat.whatsapp.com/HR1KxVIdBeLCvWlJ2omOlF',
+            icon: '🏫'
           },
           {
-            id: 'freecodecamp',
-            title: 'freeCodeCamp',
-            description: 'Learn to code for free with hands-on projects and certifications',
-            url: 'https://freecodecamp.org',
-            icon: '🔥'
-          }
-        ]
-      },
-      {
-        id: 'documentation',
-        name: 'Documentation',
-        links: [
-          {
-            id: 'mdn',
-            title: 'MDN Web Docs',
-            description: 'Comprehensive web development documentation and guides',
-            url: 'https://developer.mozilla.org',
-            icon: '📋'
+            id: 'kultur-university',
+            title: 'جامعة كولتور',
+            description: 'مجموعة طلاب جامعة كولتور في إسطنبول',
+            url: 'https://chat.whatsapp.com/IUXpN4RZl3F0VBd7Z0YeJv?mode=ac_t',
+            icon: '🎨'
           },
           {
-            id: 'stackoverflow',
-            title: 'Stack Overflow',
-            description: 'Question and answer site for professional programmers',
-            url: 'https://stackoverflow.com',
-            icon: '❓'
+            id: 'istanbul-university',
+            title: 'جامعة اسطنبول',
+            description: 'مجموعة طلاب جامعة إسطنبول الرئيسية',
+            url: 'https://chat.whatsapp.com/G5Jsv1kxebM03UJP8tLjtd?mode=ac_t',
+            icon: '🏛️'
           },
           {
-            id: 'github-docs',
-            title: 'GitHub Docs',
-            description: 'Official documentation for GitHub features and workflows',
-            url: 'https://docs.github.com',
-            icon: '📜'
-          },
-          {
-            id: 'devdocs',
-            title: 'DevDocs',
-            description: 'Unified documentation for developer tools and languages',
-            url: 'https://devdocs.io',
-            icon: '📖'
-          }
-        ]
-      },
-      {
-        id: 'tutorials',
-        name: 'Tutorials & Guides',
-        links: [
-          {
-            id: 'codecademy',
-            title: 'Codecademy',
-            description: 'Interactive coding lessons and hands-on projects',
-            url: 'https://codecademy.com',
-            icon: '🎯'
-          },
-          {
-            id: 'w3schools',
-            title: 'W3Schools',
-            description: 'Web development tutorials and references',
-            url: 'https://w3schools.com',
-            icon: '🌍'
+            id: 'cerrahpasa-university',
+            title: 'جامعة جراح باشا',
+            description: 'مجموعة طلاب جامعة جراح باشا الطبية في إسطنبول',
+            url: 'https://chat.whatsapp.com/G5Jsv1kxebM03UJP8tLjtd?mode=ac_t',
+            icon: '⚕️'
           }
         ]
       }
     ]
   },
   {
-    id: 'productivity',
-    name: 'Productivity Tools',
+    id: 'denizli',
+    name: 'دينيزلي',
     children: [
       {
-        id: 'project-management',
-        name: 'Project Management',
+        id: 'denizli-universities',
+        name: 'الجامعات',
         links: [
           {
-            id: 'notion',
-            title: 'Notion',
-            description: 'All-in-one workspace for notes, docs, and project management',
-            url: 'https://notion.so',
-            icon: '📝'
-          },
-          {
-            id: 'trello',
-            title: 'Trello',
-            description: 'Visual project management with boards, lists, and cards',
-            url: 'https://trello.com',
-            icon: '📋'
-          },
-          {
-            id: 'asana',
-            title: 'Asana',
-            description: 'Team collaboration and project management platform',
-            url: 'https://asana.com',
-            icon: '✅'
+            id: 'pamukkale-university',
+            title: 'جامعة باموكالي',
+            description: 'مجموعة طلاب جامعة باموكالي في دينيزلي',
+            url: 'https://chat.whatsapp.com/J1986VJCyXXHVLHdGjZls7?mode=ac_t',
+            icon: '🏔️'
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    id: 'sakarya',
+    name: 'سكاريا',
+    children: [
       {
-        id: 'design',
-        name: 'Design Tools',
+        id: 'sakarya-universities',
+        name: 'الجامعات',
         links: [
           {
-            id: 'figma',
-            title: 'Figma',
-            description: 'Collaborative interface design and prototyping tool',
-            url: 'https://figma.com',
-            icon: '🎨'
+            id: 'sakarya-university',
+            title: 'جامعة سكاريا',
+            description: 'مجموعة طلاب جامعة سكاريا للتواصل والدعم الأكاديمي',
+            url: 'https://chat.whatsapp.com/FR8eNmXDGXvBukbSCO0lex?mode=ac_t',
+            icon: '🌊'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'sivas',
+    name: 'سيواس',
+    children: [
+      {
+        id: 'sivas-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'cumhuriyet-university',
+            title: 'جامعة جمهوريات',
+            description: 'مجموعة طلاب جامعة جمهوريات في سيواس',
+            url: 'https://chat.whatsapp.com/Cnol9RcCQHJHKpCibYuN3J?mode=ac_t',
+            icon: '🏛️'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'konya',
+    name: 'قونيا',
+    children: [
+      {
+        id: 'konya-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'konya-technical-university',
+            title: 'جامعة قونيا تكنيك',
+            description: 'مجموعة طلاب جامعة قونيا التقنية',
+            url: 'https://chat.whatsapp.com/CtZ6Fxec98iKyopPDoPRgn?mode=ems_copy_t',
+            icon: '⚙️'
           },
           {
-            id: 'canva',
-            title: 'Canva',
-            description: 'Easy-to-use design tool for graphics and presentations',
-            url: 'https://canva.com',
-            icon: '🖌️'
+            id: 'necmettin-erbakan-university',
+            title: 'جامعة نجم الدين اربكان',
+            description: 'مجموعة طلاب جامعة نجم الدين اربكان في قونيا',
+            url: 'https://chat.whatsapp.com/JTIcud34bab6OrT3MJoUE8',
+            icon: '🌟'
           },
           {
-            id: 'sketch',
-            title: 'Sketch',
-            description: 'Digital design toolkit for creating user interfaces',
-            url: 'https://sketch.com',
-            icon: '💎'
+            id: 'selcuk-university',
+            title: 'جامعة سلجوق',
+            description: 'مجموعة طلاب جامعة سلجوق في قونيا',
+            url: 'https://chat.whatsapp.com/KLaD9mV6jY58mHpmtKNcxh',
+            icon: '🏰'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'kayseri',
+    name: 'قيصري',
+    children: [
+      {
+        id: 'kayseri-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'erciyes-university',
+            title: 'جامعة ارجيس',
+            description: 'مجموعة طلاب جامعة ارجيس في قيصري',
+            url: 'https://chat.whatsapp.com/DDbeyC806jI1FGwTl6ZRUM?mode=ac_t',
+            icon: '🏔️'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'karabuk',
+    name: 'كارابوك',
+    children: [
+      {
+        id: 'karabuk-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'karabuk-university',
+            title: 'جامعة كارابوك',
+            description: 'مجموعة طلاب جامعة كارابوك للتواصل والمساعدة',
+            url: 'https://chat.whatsapp.com/HuXwTTcUk3DKRbpNNrACoh',
+            icon: '🌲'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'kutahya',
+    name: 'كوتاهيا',
+    children: [
+      {
+        id: 'kutahya-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'kutahya-university',
+            title: 'جامعة كوتاهيا',
+            description: 'مجموعة طلاب جامعة كوتاهيا للدعم الأكاديمي',
+            url: 'https://chat.whatsapp.com/L34tKkPPW030TgiZPX8rZj?mode=ems_copy_t',
+            icon: '🏺'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'malatya',
+    name: 'ملاطيا',
+    children: [
+      {
+        id: 'malatya-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'inonu-university',
+            title: 'جامعة اينونو',
+            description: 'مجموعة طلاب جامعة اينونو في ملاطيا',
+            url: 'https://chat.whatsapp.com/IHasL7ZOD4R0zcxf8M1uJR?mode=ac_t',
+            icon: '🍯'
           }
         ]
       }
