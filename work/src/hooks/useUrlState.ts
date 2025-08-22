@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 interface UrlState {
   parent: string | null;
-  child: string | null;
+  university: string | null;
 }
 
 export const useUrlState = () => {
@@ -11,7 +11,7 @@ export const useUrlState = () => {
     const params = new URLSearchParams(hash);
     return {
       parent: params.get('parent'),
-      child: params.get('child'),
+      university: params.get('university'),
     };
   });
 
@@ -21,8 +21,8 @@ export const useUrlState = () => {
       if (state.parent) {
         params.set('parent', state.parent);
       }
-      if (state.child) {
-        params.set('child', state.child);
+      if (state.university) {
+        params.set('university', state.university);
       }
       
       const newHash = params.toString();
@@ -42,7 +42,7 @@ export const useUrlState = () => {
       const params = new URLSearchParams(hash);
       setState({
         parent: params.get('parent'),
-        child: params.get('child'),
+        university: params.get('university'),
       });
     };
 
@@ -53,20 +53,20 @@ export const useUrlState = () => {
   const setParent = (parentId: string | null) => {
     setState(prev => ({
       parent: parentId,
-      child: parentId === prev.parent ? prev.child : null, // Clear child if parent changes
+      university: parentId === prev.parent ? prev.university : null, // Clear university if parent changes
     }));
   };
 
-  const setChild = (childId: string | null) => {
+  const setUniversity = (universityId: string | null) => {
     setState(prev => ({
       ...prev,
-      child: childId,
+      university: universityId,
     }));
   };
 
   return {
     state,
     setParent,
-    setChild,
+    setUniversity,
   };
 };
