@@ -84,15 +84,15 @@ export const ChildSelect: React.FC<ChildSelectProps> = ({
   };
 
   const getPlaceholderText = () => {
-    if (!selectedParentId) return 'Select a father category first';
-    if (children.length === 0) return 'No subcategories available';
-    return 'Select a subcategory';
+    if (!selectedParentId) return 'اختر المدينة أولاً';
+    if (children.length === 0) return 'لا توجد جامعات متاحة';
+    return 'اختر الجامعة';
   };
 
   return (
     <div className="relative" ref={dropdownRef}>
       <label className="block text-sm font-medium text-brand-black mb-2">
-        Son Category
+        الجامعة
       </label>
       <button
         ref={buttonRef}
@@ -112,7 +112,7 @@ export const ChildSelect: React.FC<ChildSelectProps> = ({
         `}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label="Select son category"
+        aria-label="اختر الجامعة"
       >
         <div className="flex items-center justify-between">
           <span className={selectedChild ? 'text-brand-black font-medium' : 'text-gray-500'}>
@@ -130,7 +130,7 @@ export const ChildSelect: React.FC<ChildSelectProps> = ({
         <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-hidden">
           <ul
             role="listbox"
-            aria-label="Son categories"
+            aria-label="اختر الجامعة"
             className="py-1 max-h-60 overflow-auto"
           >
             {children.map((child, index) => (
