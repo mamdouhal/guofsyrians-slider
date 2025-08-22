@@ -10,27 +10,27 @@ export const EmptyState: React.FC<EmptyStateProps> = ({ type, parentSelected = f
     switch (type) {
       case 'no-parent':
         return {
-          icon: '🎯',
-          title: 'Select a category to start',
-          description: 'Choose a father category from the dropdown above to see available subcategories.',
+          icon: '�️',
+          title: 'اختر مدينة للبدء',
+          description: 'اختر مدينة من القائمة المنسدلة لعرض الجامعات المتاحة.',
         };
       case 'no-child':
         return {
-          icon: '📂',
-          title: 'Select a subcategory to continue',
-          description: 'Choose a son category to view the related links and resources.',
+          icon: '🎓',
+          title: 'اختر الجامعة للمتابعة',
+          description: 'اختر جامعة لعرض روابط المجموعات والموارد ذات الصلة.',
         };
       case 'no-links':
         return {
           icon: '📭',
-          title: 'No links available',
-          description: 'There are no links in this category yet. Check back later for updates.',
+          title: 'لا توجد روابط متاحة',
+          description: 'لا توجد روابط في هذه الفئة حتى الآن. تحقق مرة أخرى لاحقاً للحصول على التحديثات.',
         };
       default:
         return {
           icon: '🎯',
-          title: 'Get started',
-          description: 'Select categories to explore available links.',
+          title: 'ابدأ الآن',
+          description: 'اختر المدينة والجامعة لاستكشاف الروابط المتاحة.',
         };
     }
   };

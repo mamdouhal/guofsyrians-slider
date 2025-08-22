@@ -79,7 +79,7 @@ export const ParentSelect: React.FC<ParentSelectProps> = ({
   return (
     <div className="relative" ref={dropdownRef}>
       <label className="block text-sm font-medium text-brand-black mb-2">
-        Father Category
+        المدينة
       </label>
       <button
         ref={buttonRef}
@@ -94,11 +94,11 @@ export const ParentSelect: React.FC<ParentSelectProps> = ({
         `}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label="Select father category"
+        aria-label="الجامعة"
       >
         <div className="flex items-center justify-between">
           <span className={selectedParent ? 'text-brand-black font-medium' : 'text-gray-500'}>
-            {selectedParent ? selectedParent.name : 'Select a father category'}
+            {selectedParent ? selectedParent.name : 'اختر المدينة'}
           </span>
           <ChevronDownIcon 
             className={`w-5 h-5 text-gray-400 transform transition-transform duration-200 ${
@@ -112,7 +112,7 @@ export const ParentSelect: React.FC<ParentSelectProps> = ({
         <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-hidden">
           <ul
             role="listbox"
-            aria-label="Father categories"
+            aria-label="المدينة"
             className="py-1 max-h-60 overflow-auto"
           >
             {parents.map((parent, index) => (
