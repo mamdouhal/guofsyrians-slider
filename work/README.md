@@ -1,6 +1,6 @@
 # 🎯 Guofsyrians Slider
 
-A modern, accessible React application featuring a dual-dropdown navigation system for exploring categorized links and resources. Built with performance and user experience in mind.
+A modern, accessible React application for Turkish university WhatsApp group links. Features a streamlined city-to-university selection interface for easy access to student communities across Turkey. Built with performance and user experience in mind.
 
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
@@ -9,11 +9,11 @@ A modern, accessible React application featuring a dual-dropdown navigation syst
 
 ## ✨ Features
 
-### 🎛️ Navigation System
-- **Single-Select Dropdowns**: Hierarchical father → son category selection
+### 🎛️ Simplified Navigation
+- **City Selection**: Choose from Turkish cities (Istanbul, Ankara, Izmir, etc.)
+- **Direct University Access**: Click university cards to view WhatsApp group links
 - **URL State Persistence**: Bookmarkable links with hash-based routing
 - **Keyboard Navigation**: Full accessibility with arrow keys, Enter, and Escape
-- **Visual Feedback**: Animated dropdowns with focus states and highlights
 
 ### 🎨 Design Excellence
 - **Custom Brand Theme**: Tajawal font with curated color palette
@@ -27,10 +27,11 @@ A modern, accessible React application featuring a dual-dropdown navigation syst
 - **Focus Management**: Logical tab order and visible focus indicators
 - **Contrast Standards**: WCAG compliant color combinations
 
-### 📊 Rich Content
-- **4 Main Categories**: Content & Media, Development Tools, Learning Resources, Productivity Tools
-- **35+ Curated Links**: Hand-picked resources across multiple domains
-- **Smart Organization**: Logical subcategory groupings for easy discovery
+### 📊 University Content
+- **Turkish Universities**: Comprehensive database of major universities
+- **WhatsApp Groups**: Direct links to student community groups
+- **Multi-City Coverage**: Universities across Turkey's major cities
+- **Smart Organization**: Intuitive city-based grouping for easy discovery
 
 ## 🎨 Design System
 
@@ -101,17 +102,18 @@ npm run preview
 ```
 src/
 ├── components/              # Reusable UI components
-│   ├── ParentSelect.tsx    # Father category dropdown with accessibility
-│   ├── ChildSelect.tsx     # Son category dropdown with validation
-│   ├── LinksGrid.tsx       # Responsive card grid for links
+│   ├── ParentSelect.tsx    # City selection dropdown with accessibility
+│   ├── UniversitySelect.tsx # University card grid for direct selection
+│   ├── UniversityLinks.tsx # University details with WhatsApp links
 │   ├── EmptyState.tsx      # Contextual empty states with animations
 │   ├── Breadcrumb.tsx      # Navigation breadcrumb component
+│   ├── Header.tsx          # Application header with Arabic design
 │   └── LoadingSpinner.tsx  # Loading indicator component
 ├── hooks/                  # Custom React hooks
 │   ├── useUrlState.ts      # URL hash state management
 │   └── useCatalog.ts       # Data access and validation helpers
 ├── data/                   # Static data and types
-│   └── catalog.ts          # Category definitions and link database
+│   └── catalog.ts          # University definitions and WhatsApp links
 ├── App.tsx                 # Main application component
 ├── main.tsx               # Application entry point
 └── index.css              # Global styles and Tailwind directives
@@ -120,24 +122,24 @@ src/
 ## 🎮 User Guide
 
 ### Basic Navigation
-1. **Select Father Category**: Choose from main categories (Content, Development, Learning, Productivity)
-2. **Select Son Category**: Pick a subcategory to see related links
-3. **Explore Links**: Click any link card to open in a new tab
-4. **Share State**: Copy the URL to share your current selection
+1. **Select City**: Choose from Turkish cities (Istanbul, Ankara, Izmir, Bursa, etc.)
+2. **Browse Universities**: View university cards with names and descriptions
+3. **Access WhatsApp Groups**: Click a university to see its WhatsApp group links
+4. **Join Communities**: Click "Join WhatsApp Group" to connect with students
 
 ### Keyboard Shortcuts
 | Key | Action |
 |-----|--------|
-| `Tab` / `Shift+Tab` | Navigate between dropdowns |
-| `Enter` / `Space` | Open dropdown or select option |
+| `Tab` / `Shift+Tab` | Navigate between city dropdown and university cards |
+| `Enter` / `Space` | Open dropdown or select university |
 | `↑` / `↓` | Navigate dropdown options |
 | `Escape` | Close dropdown and return focus |
 
 ### URL Format
 ```
-#parent=development&child=frameworks
+#parent=istanbul&university=istanbul-university
 ```
-Share this URL to show specific category combinations.
+Share this URL to show specific university selections.
 
 ## 🛠️ Technical Stack
 
@@ -159,25 +161,25 @@ Share this URL to show specific category combinations.
 
 ## 📊 Data Structure
 
-### Adding New Categories
+### Adding New Universities
 
-Edit `src/data/catalog.ts` to add new content:
+Edit `src/data/catalog.ts` to add new universities:
 
 ```typescript
 {
-  id: 'your-category',
-  name: 'Your Category Name',
+  id: 'city-name',
+  name: 'City Name',
   children: [
     {
-      id: 'subcategory',
-      name: 'Subcategory Name',
+      id: 'universities',
+      name: 'Universities',
       links: [
         {
-          id: 'unique-link-id',
-          title: 'Link Title',
-          description: 'Compelling description that helps users understand the value',
-          url: 'https://example.com',
-          icon: '🚀' // Emoji or icon identifier
+          id: 'university-unique-id',
+          title: 'University Name',
+          description: 'Brief description of the university and its programs',
+          url: 'https://chat.whatsapp.com/your-group-link',
+          icon: '🎓' // University or education related emoji
         }
       ]
     }
@@ -186,10 +188,10 @@ Edit `src/data/catalog.ts` to add new content:
 ```
 
 ### Content Guidelines
-- **Titles**: Clear, concise, and descriptive
-- **Descriptions**: 60-120 characters explaining the resource value
-- **URLs**: Prefer HTTPS and canonical URLs
-- **Icons**: Use relevant emojis or consistent icon system
+- **University Names**: Use official Turkish university names
+- **Descriptions**: Brief info about programs, campus, or specialties
+- **WhatsApp Links**: Ensure links are active and properly moderated
+- **Icons**: Use education-related emojis (🎓, 📚, 🏛️, etc.)
 
 ## 🔧 Customization
 
@@ -332,7 +334,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-**[Live Demo](http://localhost:5174)** • **[Report Bug](https://github.com/mamdouhal/guofsyrians-slider/issues)** • **[Request Feature](https://github.com/mamdouhal/guofsyrians-slider/issues)**
+**[Live Demo](http://localhost:5175)** • **[Report Bug](https://github.com/mamdouhal/guofsyrians-slider/issues)** • **[Request Feature](https://github.com/mamdouhal/guofsyrians-slider/issues)**
 
 Made with ❤️ by [Mamdouhal](https://github.com/mamdouhal)
 
