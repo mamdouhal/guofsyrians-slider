@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/syria-union-logo-white.png';
+import logoImage from '../assets/whitelogoGuofsyrians.png';
 
 interface HeaderProps {
   title?: string;
