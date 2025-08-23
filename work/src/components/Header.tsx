@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/whitelogoGuofsyrians.png';
+
 
 interface HeaderProps {
   title?: string;
@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex-shrink-0 order-1">
             <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center">
               <img 
-                src={logoImage}
+                src={"assets/whitelogoGuofsyrians.png"}
                 alt="شعار اتحاد الطلاب السوريين"
                 className="h-full w-full object-contain"
                 loading="lazy"
