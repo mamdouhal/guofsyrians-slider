@@ -29,8 +29,8 @@ export const catalog: ParentCategory[] = [
         links: [
           {
             id: 'sparta-university',
-            title: 'جامعة اسبارطة',
-            description: 'مجموعة طلاب جامعة اسبارطة للتواصل والمساعدة الأكاديمية',
+            title: 'جامعات إسبارطة',
+            description: 'مجموعة طلاب جامعتي إسبارطة التطبيقية وسليمان ديميرال للتواصل والمساعدة الأكاديمية',
             url: 'https://chat.whatsapp.com/BTlTQe9pRX46SJ0jVqX4pm?mode=ac_t',
             icon: '🏛️'
           }
@@ -87,6 +87,20 @@ export const catalog: ParentCategory[] = [
             description: 'مجموعة طلاب جامعة جراح باشا الطبية في إسطنبول',
             url: 'https://chat.whatsapp.com/G5Jsv1kxebM03UJP8tLjtd?mode=ac_t',
             icon: '⚕️'
+          },
+          {
+            id: 'istinye-university',
+            title: 'جامعة استينيا',
+            description: 'مجموعة طلاب جامعة استينيا في إسطنبول',
+            url: 'https://chat.whatsapp.com/GRRlIKoWLW68Fh6MBNpsat?mode=ems_copy_t',
+            icon: '🏥'
+          },
+          {
+            id: 'aydin-university',
+            title: 'جامعة ايدن',
+            description: 'مجموعة طلاب جامعة ايدن في إسطنبول',
+            url: 'https://chat.whatsapp.com/JYaSS4s6wPf5R9s8uaFYZC?mode=ems_copy_t',
+            icon: '🎯'
           }
         ]
       }
@@ -177,6 +191,13 @@ export const catalog: ParentCategory[] = [
             description: 'مجموعة طلاب جامعة سلجوق في قونيا',
             url: 'https://chat.whatsapp.com/KLaD9mV6jY58mHpmtKNcxh',
             icon: '🏰'
+          },
+          {
+            id: 'karatay-university',
+            title: 'جامعة كاراتاي',
+            description: 'مجموعة طلاب جامعة كاراتاي في قونيا',
+            url: 'https://chat.whatsapp.com/DSDJjF0xUiSLJvy3GljHM6?mode=ems_copy_t',
+            icon: '🏫'
           }
         ]
       }
@@ -253,6 +274,63 @@ export const catalog: ParentCategory[] = [
             description: 'مجموعة طلاب جامعة اينونو في ملاطيا',
             url: 'https://chat.whatsapp.com/IHasL7ZOD4R0zcxf8M1uJR?mode=ac_t',
             icon: '🍯'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'izmit',
+    name: 'ايزميت',
+    children: [
+      {
+        id: 'izmit-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'kocaeli-university',
+            title: 'جامعة كوجالي',
+            description: 'مجموعة طلاب جامعة كوجالي في ايزميت',
+            url: 'https://chat.whatsapp.com/Dw5unwlgTHSDjoSVvbgfGV?mode=ac_t',
+            icon: '🌿'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'ankara',
+    name: 'انقرة',
+    children: [
+      {
+        id: 'ankara-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'ankara-university',
+            title: 'جامعة انقرة',
+            description: 'مجموعة طلاب جامعة انقرة في العاصمة',
+            url: 'https://chat.whatsapp.com/CIgZ1J73ih5AKgwRWjpmP8',
+            icon: '🏛️'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'bursa',
+    name: 'بورصة',
+    children: [
+      {
+        id: 'bursa-universities',
+        name: 'الجامعات',
+        links: [
+          {
+            id: 'uludag-university',
+            title: 'جامعة اولوداغ',
+            description: 'مجموعة طلاب جامعة اولوداغ في بورصة',
+            url: 'https://chat.whatsapp.com/KcUfPmVbRG3G9w5vKtspW6',
+            icon: '🗻'
           }
         ]
       }
