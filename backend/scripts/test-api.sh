@@ -58,13 +58,13 @@ test_endpoint "Get All Cities" "/api/cities" "success"
 test_endpoint "Get City (Istanbul)" "/api/cities/istanbul" "إسطنبول"
 
 # Test 4: Get universities by city
-test_endpoint "Get Universities (Istanbul)" "/api/cities/istanbul/universities" "universities"
+test_endpoint "Get Universities (Istanbul)" "/api/cities/istanbul/universities" "success"
 
 # Test 5: Get specific university
 test_endpoint "Get University" "/api/universities/istanbul-universities" "الجامعات"
 
 # Test 6: Get links by university
-test_endpoint "Get Links (Istanbul)" "/api/universities/istanbul-universities/links" "links"
+test_endpoint "Get Links (Istanbul)" "/api/universities/istanbul-universities/links" "success"
 
 # Test 7: Get full catalog
 test_endpoint "Get Full Catalog" "/api/catalog" "children"

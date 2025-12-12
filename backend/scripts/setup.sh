@@ -37,13 +37,23 @@ echo "💾 Step 3: Creating D1 Database..."
 echo "   Creating 'guofsyrians-db'..."
 DB_OUTPUT=$(wrangler d1 create guofsyrians-db 2>&1 || npx wrangler d1 create guofsyrians-db 2>&1)
 
-# Extract database_id from output
-DB_ID=$(echo "$DB_OUTPUT" | grep "database_id" | sed -n 's/.*database_id = "\(.*\)"/\1/p')
+# Extract database_id from output using multiple patterns for robustness
+DB_ID=$(echo "$DB_OUTPUT" | grep -o 'database_id[[:space:]]*=[[:space:]]*"[^"]*"' | sed 's/database_id[[:space:]]*=[[:space:]]*"\([^"]*\)"/\1/')
+
+# Fallback: try another pattern
+if [ -z "$DB_ID" ]; then
+    DB_ID=$(echo "$DB_OUTPUT" | grep -o '[a-f0-9]\{8\}-[a-f0-9]\{4\}-[a-f0-9]\{4\}-[a-f0-9]\{4\}-[a-f0-9]\{12\}')
+fi
 
 if [ -z "$DB_ID" ]; then
-    echo "⚠️  Database might already exist or creation failed"
-    echo "   Check the output above for details"
-    echo "   You may need to manually update wrangler.toml with your database_id"
+    echo "⚠️  Could not extract database ID automatically"
+    echo "   Database might already exist or creation failed"
+    echo "   Please check the output above and manually update wrangler.toml"
+    echo ""
+    echo "$DB_OUTPUT"
+    echo ""
+    echo "   If the database already exists, you can find its ID in your"
+    echo "   Cloudflare dashboard or by running: wrangler d1 list"
 else
     echo "   ✅ Database created with ID: $DB_ID"
     echo "   Updating wrangler.toml..."

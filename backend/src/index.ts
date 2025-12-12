@@ -12,7 +12,23 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 // CORS middleware
 app.use('/*', cors({
-  origin: (origin) => origin, // Allow all origins, can be restricted in production
+  origin: (origin, c) => {
+    // In development, allow all origins
+    const allowedOrigins = c.env.ALLOWED_ORIGINS?.split(',') || ['*'];
+    
+    // If ALLOWED_ORIGINS is '*', allow all origins
+    if (allowedOrigins.includes('*')) {
+      return origin;
+    }
+    
+    // Check if origin is in the allowed list
+    if (origin && allowedOrigins.includes(origin)) {
+      return origin;
+    }
+    
+    // Default: reject by not returning the origin
+    return null;
+  },
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type'],
 }));

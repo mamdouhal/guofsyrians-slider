@@ -44,22 +44,34 @@ database_id = "your-database-id-here"
 
 ### 3. Run Migrations
 
-```bash
-# For local development
-npm run db:migrate:local
+Apply the database schema to your D1 database:
 
-# For production
+**For Production (default):**
+```bash
 npm run db:migrate
 ```
 
+**For Local Development:**
+```bash
+npm run db:migrate:local
+```
+
+This will create the tables: `cities`, `universities`, and `links`.
+
+> **Note:** By default, migration commands run against your remote (production) D1 database. Use the `:local` variants for local development and testing.
+
 ### 4. Seed the Database
 
-```bash
-# For local development
-npm run db:seed:local
+Populate the database with initial data:
 
-# For production
+**For Production (default):**
+```bash
 npm run db:seed
+```
+
+**For Local Development:**
+```bash
+npm run db:seed:local
 ```
 
 ## 🏃 Development

@@ -12,6 +12,9 @@ database_name = "guofsyrians-db"
 database_id = "your-database-id-here" # Update this after creating the database
 
 # CORS Configuration
+# Set allowed origins for CORS. Use '*' to allow all origins (development only)
+# For production, specify comma-separated list of allowed origins:
+# ALLOWED_ORIGINS = "https://yourdomain.com,https://www.yourdomain.com"
 [vars]
 ALLOWED_ORIGINS = "*"
 
