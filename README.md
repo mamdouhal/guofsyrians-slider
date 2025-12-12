@@ -1,11 +1,13 @@
 # 🎯 Guofsyrians Slider
 
-A modern, accessible React application featuring a dual-dropdown navigation system for exploring categorized links and resources. Built with performance and user experience in mind.
+A modern, accessible React application featuring a dual-dropdown navigation system for exploring categorized links and resources. Built with performance and user experience in mind, with a Hono backend powered by Cloudflare Workers and D1 database.
 
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.0-646CFF.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC.svg)](https://tailwindcss.com/)
+[![Hono](https://img.shields.io/badge/Hono-4.0-orange.svg)](https://hono.dev/)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020.svg)](https://workers.cloudflare.com/)
 
 ## ✨ Features
 
@@ -98,23 +100,38 @@ npm run preview
 
 ## 📁 Project Architecture
 
+### Frontend Structure
 ```
-src/
-├── components/              # Reusable UI components
-│   ├── ParentSelect.tsx    # Father category dropdown with accessibility
-│   ├── ChildSelect.tsx     # Son category dropdown with validation
-│   ├── LinksGrid.tsx       # Responsive card grid for links
-│   ├── EmptyState.tsx      # Contextual empty states with animations
-│   ├── Breadcrumb.tsx      # Navigation breadcrumb component
-│   └── LoadingSpinner.tsx  # Loading indicator component
-├── hooks/                  # Custom React hooks
-│   ├── useUrlState.ts      # URL hash state management
-│   └── useCatalog.ts       # Data access and validation helpers
-├── data/                   # Static data and types
-│   └── catalog.ts          # Category definitions and link database
-├── App.tsx                 # Main application component
-├── main.tsx               # Application entry point
-└── index.css              # Global styles and Tailwind directives
+work/
+├── src/
+│   ├── components/              # Reusable UI components
+│   │   ├── ParentSelect.tsx    # Father category dropdown with accessibility
+│   │   ├── ChildSelect.tsx     # Son category dropdown with validation
+│   │   ├── LinksGrid.tsx       # Responsive card grid for links
+│   │   ├── EmptyState.tsx      # Contextual empty states with animations
+│   │   ├── Breadcrumb.tsx      # Navigation breadcrumb component
+│   │   └── LoadingSpinner.tsx  # Loading indicator component
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── useUrlState.ts      # URL hash state management
+│   │   └── useCatalog.ts       # Data access and validation helpers
+│   ├── data/                   # Static data and types
+│   │   └── catalog.ts          # Category definitions and link database
+│   ├── App.tsx                 # Main application component
+│   ├── main.tsx               # Application entry point
+│   └── index.css              # Global styles and Tailwind directives
+```
+
+### Backend Structure
+```
+backend/
+├── src/
+│   └── index.ts                # Hono API server with D1 database
+├── migrations/
+│   ├── 0001_initial_schema.sql # Database schema
+│   └── seed.sql               # Seed data for development
+├── wrangler.toml              # Cloudflare Workers configuration
+├── package.json               # Backend dependencies
+└── README.md                  # Backend documentation
 ```
 
 ## 🎮 User Guide
@@ -141,21 +158,26 @@ Share this URL to show specific category combinations.
 
 ## 🛠️ Technical Stack
 
-### Core Technologies
+### Frontend Technologies
 - **[React 18](https://react.dev/)** - Modern React with Hooks and Concurrent Features
 - **[TypeScript](https://www.typescriptlang.org/)** - Type safety and enhanced DX
 - **[Vite](https://vitejs.dev/)** - Lightning-fast build tool and dev server
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first styling framework
+
+### Backend Technologies
+- **[Hono](https://hono.dev/)** - Ultrafast web framework for Cloudflare Workers
+- **[Cloudflare Workers](https://workers.cloudflare.com/)** - Serverless edge computing platform
+- **[Cloudflare D1](https://developers.cloudflare.com/d1/)** - Serverless SQL database (SQLite)
+- **[Wrangler](https://developers.cloudflare.com/workers/wrangler/)** - CLI tool for Cloudflare Workers
 
 ### Development Tools
 - **[ESLint](https://eslint.org/)** - Code linting and quality checks
 - **[PostCSS](https://postcss.org/)** - CSS processing and optimization
 - **[Heroicons](https://heroicons.com/)** - Beautiful SVG icons
 
-### Hosting Ready
-- **Static Site**: No backend required, deploy anywhere
-- **CDN Optimized**: Minified assets with tree-shaking
-- **Progressive Enhancement**: Works without JavaScript for basic content
+### Deployment
+- **GitHub Actions** - Automated CI/CD pipeline for backend deployment
+- **Cloudflare Workers** - Global edge network with low latency
 
 ## 📊 Data Structure
 
@@ -234,7 +256,26 @@ Add to `src/index.css`:
 
 ## 🚀 Deployment
 
-### Static Hosting Platforms
+### Backend Deployment (Cloudflare Workers)
+
+The backend is automatically deployed via GitHub Actions when changes are pushed to the `main` branch.
+
+**Prerequisites:**
+1. Cloudflare account
+2. GitHub repository secrets configured:
+   - `CLOUDFLARE_API_TOKEN`: Your Cloudflare API token
+   - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
+
+**Manual Deployment:**
+```bash
+cd backend
+npm install
+npm run deploy
+```
+
+See [backend/README.md](backend/README.md) for detailed backend setup instructions.
+
+### Frontend Deployment
 
 **Vercel (Recommended)**
 ```bash
@@ -252,6 +293,13 @@ npm run build
 ```bash
 npm run build
 # Push /dist contents to gh-pages branch
+```
+
+**Cloudflare Pages**
+```bash
+# Connect your repository to Cloudflare Pages
+# Build command: npm run build
+# Build output directory: dist
 ```
 
 ### Docker Deployment

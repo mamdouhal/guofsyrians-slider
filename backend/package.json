@@ -9,7 +9,9 @@
     "db:migrate": "wrangler d1 migrations apply guofsyrians-db",
     "db:migrate:local": "wrangler d1 migrations apply guofsyrians-db --local",
     "db:seed": "wrangler d1 execute guofsyrians-db --file=./migrations/seed.sql",
-    "db:seed:local": "wrangler d1 execute guofsyrians-db --local --file=./migrations/seed.sql"
+    "db:seed:local": "wrangler d1 execute guofsyrians-db --local --file=./migrations/seed.sql",
+    "test:api": "bash scripts/test-api.sh",
+    "setup": "bash scripts/setup.sh"
   },
   "dependencies": {
     "hono": "^4.0.0"

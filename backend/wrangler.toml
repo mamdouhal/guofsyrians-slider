@@ -4,10 +4,12 @@ compatibility_date = "2024-12-12"
 node_compat = true
 
 # D1 Database Binding
+# Note: After creating your D1 database with 'wrangler d1 create guofsyrians-db',
+# update the database_id below with the ID from the output
 [[d1_databases]]
 binding = "DB"
 database_name = "guofsyrians-db"
-database_id = "" # Will be filled after creating the database
+database_id = "your-database-id-here" # Update this after creating the database
 
 # CORS Configuration
 [vars]
