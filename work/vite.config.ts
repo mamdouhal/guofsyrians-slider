@@ -8,4 +8,11 @@ export default defineConfig({
     react(),
     svgr(),
   ],
+  // Base path for GitHub Pages deployment
+  // Change to '/' if deploying to custom domain or root
+  base: '/guofsyrians-slider/',
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
 });
