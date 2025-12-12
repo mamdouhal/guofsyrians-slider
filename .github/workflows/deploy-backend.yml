@@ -17,6 +17,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy Backend
+    permissions:
+      contents: read
     defaults:
       run:
         working-directory: ./backend
