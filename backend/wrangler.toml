@@ -1,0 +1,22 @@
+name = "guofsyrians-slider-backend"
+main = "src/index.ts"
+compatibility_date = "2024-12-12"
+node_compat = true
+
+# D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "guofsyrians-db"
+database_id = "" # Will be filled after creating the database
+
+# CORS Configuration
+[vars]
+ALLOWED_ORIGINS = "*"
+
+# Development settings
+[env.development]
+name = "guofsyrians-slider-backend-dev"
+
+# Production settings
+[env.production]
+name = "guofsyrians-slider-backend"
